@@ -142,7 +142,7 @@ CREATE TABLE experience_maneuvers (
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/guyFromTV/backend-homework-project.git
+   git clone <repository-url>
    cd backend-homework-project
    ```
 
@@ -213,11 +213,13 @@ Authentication can be disabled by setting `auth.enabled` to `false` in `config.p
 1. **Configuration File**: The `config.php` file contains database credentials. **Never commit real credentials to version control.**
    - Use environment variables in production
    - Add `config.php` to `.gitignore`
+   - Create a `config.example.php` template with placeholder values
 
-2. **Current Vulnerabilities**: 
-   - Database credentials are currently hardcoded in the repository
-   - This is for educational purposes only
-   - In production, use environment variables or secure credential management
+2. **Production Best Practices**: 
+   - Store sensitive credentials in environment variables
+   - Use a secrets management system
+   - Implement proper access controls on configuration files
+   - Regular security audits and dependency updates
 
 3. **Security Features Implemented**:
    - Password hashing with bcrypt
